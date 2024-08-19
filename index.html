@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan</title>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8e2d4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.rakhi-wrapper {
+    position: relative;
+    animation: float 6s ease-in-out infinite, pulse 2s infinite alternate;
+}
+
+.rakhi {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgba(255, 165, 0, 0.7);
+    animation: glow 2s ease-in-out infinite alternate, appear 3s ease-in-out forwards;
+}
+
+.message {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 2s ease-out forwards 4s, fadeIn 3s ease-in-out forwards 3s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.7); }
+    100% { box-shadow: 0 0 20px 5px rgba(255, 165, 0, 1); }
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.star, .gift {
+    position: absolute;
+    font-size: 24px;
+    animation: floatStars 5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatStars {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px) rotate(20deg); }
+    100% { transform: translateY(0) rotate(-20deg); }
+}
+
+/* Positioning of Stars and Gifts */
+.star:nth-child(1) { top: 10%; left: 20%; animation-duration: 6s; }
+.star:nth-child(2) { top: 30%; left: 70%; animation-duration: 7s; }
+.star:nth-child(3) { top: 50%; left: 40%; animation-duration: 5s; }
+.star:nth-child(4) { top: 70%; left: 10%; animation-duration: 6.5s; }
+.star:nth-child(5) { top: 80%; left: 80%; animation-duration: 7.5s; }
+.gift:nth-child(1) { top: 15%; left: 80%; animation-duration: 5.5s; }
+.gift:nth-child(2) { top: 50%; left: 20%; animation-duration: 6.5s; }
+.gift:nth-child(3) { top: 70%; left: 50%; animation-duration: 6s; }
+
+</style>
+<body>
+    <div class="container">
+        <div class="rakhi-wrapper">
+            <img src="rakhi.jpeg" alt="Rakhi" class="rakhi">
+        </div>
+        <div class="message">
+            <h1>Happy Raksha Bandhan, Nikisha Didi!</h1>
+            <p>Wishing you all the love, joy, and happiness on this special day.</p>
+        </div>
+    </div>
+
+    <!-- Stars and Gifts Floating Around -->
+    <div class="star">⭐</div>
+    <div class="star">⭐</div>
+    <div class="star">⭐</div>
+    <div class="star">⭐</div>
+    <div class="star">⭐</div>
+    <div class="gift">🎁</div>
+    <div class="gift">🎁</div>
+    <div class="gift">🎁</div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Additional animation or interaction logic can go here if needed
+    });
+    </script>
+</body>
+</html>
